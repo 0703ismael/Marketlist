@@ -1,0 +1,40 @@
+:root {
+    --bg-body: #eef2f3;
+    --bg-card: #ffffff;
+    --text-main: #2c3e50;
+    --primary: #008080;
+    --secondary: #45a049;
+    --light-gray: #f4f4f4;
+}
+
+/* Variáveis para Modo Escuro */
+.dark-theme {
+    --bg-body: #1a1a1a;
+    --bg-card: #2d2d2d;
+    --text-main: #f4f4f4;
+    --primary: #00b3b3;
+    --light-gray: #3d3d3d;
+}
+
+body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-body); color: var(--text-main); transition: 0.3s; margin: 0; padding: 10px; }
+.container { max-width: 900px; margin: 20px auto; background: var(--bg-card); padding: 25px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+
+.header-top { display: flex; justify-content: space-between; align-items: center; }
+#theme-toggle { cursor: pointer; padding: 8px 15px; border-radius: 20px; border: 1px solid var(--primary); background: transparent; color: var(--primary); font-weight: bold; }
+
+.add-product { display: flex; gap: 10px; margin-bottom: 30px; background: var(--light-gray); padding: 20px; border-radius: 10px; flex-wrap: wrap; }
+.input-group { display: flex; flex-direction: column; flex: 1; min-width: 150px; }
+input { padding: 12px; border: 1px solid #ddd; border-radius: 8px; background: var(--bg-card); color: var(--text-main); }
+
+.btn-add { background: var(--primary); color: white; border: none; padding: 0 25px; border-radius: 8px; cursor: pointer; height: 45px; align-self: flex-end; }
+.tables-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 768px) { .tables-grid { grid-template-columns: 1fr; } }
+
+.card { border: 1px solid #eee; border-radius: 10px; overflow: hidden; background: var(--bg-card); }
+.card h3 { background: var(--primary); color: white; margin: 0; padding: 12px; font-size: 1rem; }
+table { width: 100%; border-collapse: collapse; }
+td { padding: 12px; border-bottom: 1px solid #eee; }
+
+.cart-summary { margin-top: 30px; padding: 20px; background: #2c3e50; color: white; border-radius: 10px; text-align: right; }
+.total-value { font-size: 2rem; color: #2ecc71; font-weight: bold; }
+.btn-clear { background: #e74c3c; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; float: left; }

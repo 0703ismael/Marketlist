@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketList Personal | Ismael Araújo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme"> <div class="container">
+        <header>
+            <div class="header-top">
+                <h1>MarketList</h1>
+                <button id="theme-toggle" onclick="toggleTheme()">🌓 Alternar Cor</button>
+            </div>
+            <p>Sua lista pessoal, salva apenas no seu dispositivo.</p>
+        </header>
+
+        <div class="add-product">
+            <div class="input-group">
+                <label>Produto</label>
+                <input type="text" id="newProductName" placeholder="Ex: Arroz">
+            </div>
+            <div class="input-group">
+                <label>Preço (R$)</label>
+                <input type="text" id="newProductPrice" placeholder="0,00">
+            </div>
+            <button class="btn-add" onclick="addNewProduct()">Adicionar</button>
+        </div>
+
+        <div class="tables-grid">
+            <div class="card">
+                <h3>🛒 Minha Lista</h3>
+                <table><tbody id="productTable"></tbody></table>
+            </div>
+            <div class="card">
+                <h3>✅ No Carrinho</h3>
+                <table><tbody id="cartTable"></tbody></table>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <div class="summary-actions">
+                <button class="btn-clear" onclick="clearAll()">Limpar Tudo</button>
+            </div>
+            <span>Total no Carrinho:</span><br>
+            <span class="total-value">R$ <span id="totalPrice">0.00</span></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
